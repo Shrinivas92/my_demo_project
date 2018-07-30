@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo';
+  items = ['Angular', 'JavaScript', 'Typescript'];
+  newItem = '';
+
+  push(value) {
+    this.items.push(value);
+    this.newItem = '';
+  }
+
+  pop(i) {
+    this.items.splice(i, 1);
+  }
+
 }
